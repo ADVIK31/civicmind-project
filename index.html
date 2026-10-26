@@ -1,3 +1,10 @@
+To reduce the font size of the main title on the front page, you need to modify the `clamp` values inside the `#hero-3d` CSS selector.
+
+I have updated the font size from `clamp(38px, 8vw, 110px)` to `clamp(32px, 6vw, 80px)`, which reduces the minimum, the fluid scaling, and the maximum size.
+
+Here is the complete updated file:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -276,7 +283,8 @@
             left: 5vw;
             bottom: 12vh;
             max-width: 70vw;
-            font: 900 clamp(38px, 8vw, 110px)/0.95 'Orbitron', sans-serif;
+            /* Reduced font size here: from clamp(38px, 8vw, 110px) to clamp(32px, 6vw, 80px) */
+            font: 900 clamp(32px, 6vw, 80px)/0.95 'Orbitron', sans-serif;
             text-transform: uppercase;
             text-shadow: 0 0 40px rgba(103, 232, 249, 0.4);
             will-change: transform, opacity;
@@ -3413,3 +3421,5 @@
     </script>
 </body>
 </html>
+
+```
